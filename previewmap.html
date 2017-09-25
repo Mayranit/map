@@ -43,6 +43,11 @@
         }
       })(marker, i));
     }
+    
+    google.maps.event.addListener(map, 'click', function(event) {
+   alert( 'Lat: ' + event.latLng.lat() + ' and Longitude is: ' + event.latLng.lng() );
+});
+    
   </script>
 </body>
 </html>
