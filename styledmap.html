@@ -93,6 +93,10 @@ map.on('click', function (e) {
     headers: {"X-HTTP-Method-Override": "PUT"}, // X-HTTP-Method-Override set to PUT.
     username: "dsa", // Most SAP web services require credentials
     password: "dsa",
+    crossDomain: true,
+    xhrFields: {
+          withCredentials: true
+    },
     data: '{"$type":"dynamic","?value":"36.01,-86.02"}' // Some data e.g. Valid JSON as a string
 });
 });
