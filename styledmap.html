@@ -5,6 +5,7 @@
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
@@ -85,8 +86,18 @@ map.on('load', function () {
 map.on('click', function (e) {
     document.getElementById('info').innerHTML =       
         JSON.stringify(e.lngLat);
-        localStorage.setItem("lngLat", JSON.stringify(e.lngLat));
+        $.ajax({
+    type: 'POST', // Use POST with X-HTTP-Method-Override or a straight PUT if appropriate.
+    dataType: 'json', // Set datatype - affects Accept header
+    url: "http://10.11.199.13:8025/data/coordinates", // A valid URL
+    headers: {"X-HTTP-Method-Override": "PUT"}, // X-HTTP-Method-Override set to PUT.
+    username: "dsa", // Most SAP web services require credentials
+    password: "dsa",
+    data: '{"$type":"dynamic","?value":"36.01,-86.02"}' // Some data e.g. Valid JSON as a string
 });
+});
+
+
 
 
 </script>
