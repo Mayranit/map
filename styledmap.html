@@ -91,12 +91,6 @@ map.on('click', function (e) {
     dataType: 'json', // Set datatype - affects Accept header
     url: "http://10.11.199.13:8025/data/coordinates", // A valid URL
     headers: {"X-HTTP-Method-Override": "PUT"}, // X-HTTP-Method-Override set to PUT.
-    username: "dsa", // Most SAP web services require credentials
-    password: "dsa",
-    crossDomain: true,
-    xhrFields: {
-          withCredentials: true
-    },
     data: '{"$type":"dynamic","?value":"36.01,-86.02"}' // Some data e.g. Valid JSON as a string
 });
 });
