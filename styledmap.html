@@ -89,6 +89,7 @@ map.on('click', function (e) {
         $.ajax({
     type: 'POST', // Use POST with X-HTTP-Method-Override or a straight PUT if appropriate.
     dataType: 'json', // Set datatype - affects Accept header
+    contentType: "application/json; charset=utf-8",        
     url: "http://10.11.199.13:8025/data/coordinates", // A valid URL
     headers: {"X-HTTP-Method-Override": "PUT"}, // X-HTTP-Method-Override set to PUT.
     data: '{"$type":"dynamic","?value":"36.01,-86.02"}' // Some data e.g. Valid JSON as a string
