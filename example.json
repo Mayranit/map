@@ -1,59 +1,70 @@
 {
-  "type": "Feature",
-  "properties": {
-    "name": "Bermuda Triangle",
-    "area": 1150180
-  },
-  "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-      [
-        [-64.73, 32.31],
-        [-80.19, 25.76],
-        [-66.09, 18.43],
-        [-64.73, 32.31]
-      ]
-    ]
-  }
-}
-
-
-{
-  "type": "Feature",
-  "properties": {
-    "name": "Flemish Diamond",
-    "area": 2947
-  },
-  "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-      [
-        [3.55, 51.08],
-        [4.36, 50.73],
-        [4.84, 50.85],
-        [4.45, 51.30],
-        [3.55, 51.08]
-      ]
-    ]
-  }
-}
-
-
-{
-  "type": "Feature",
-  "properties": {
-    "name": "Research Triangle",
-    "area": 252
-  },
-  "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-      [
-        [-78.93, 36.00],
-        [-78.67, 35.78],
-        [-79.04, 35.90],
-        [-78.93, 36.00]
-      ]
-    ]
-  }
-}   
+        'type': 'FeatureCollection',
+        'crs': {
+          'type': 'name',
+          'properties': {
+            'name': 'EPSG:3857'
+          }
+        },
+        'features': [{
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [0, 0]
+          }
+        }, {
+          'type': 'Feature',
+          'geometry': {
+            'type': 'LineString',
+            'coordinates': [[4e6, -2e6], [8e6, 2e6]]
+          }
+        }, {
+          'type': 'Feature',
+          'geometry': {
+            'type': 'LineString',
+            'coordinates': [[4e6, 2e6], [8e6, -2e6]]
+          }
+        }, {
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Polygon',
+            'coordinates': [[[-5e6, -1e6], [-4e6, 1e6], [-3e6, -1e6]]]
+          }
+        }, {
+          'type': 'Feature',
+          'geometry': {
+            'type': 'MultiLineString',
+            'coordinates': [
+              [[-1e6, -7.5e5], [-1e6, 7.5e5]],
+              [[1e6, -7.5e5], [1e6, 7.5e5]],
+              [[-7.5e5, -1e6], [7.5e5, -1e6]],
+              [[-7.5e5, 1e6], [7.5e5, 1e6]]
+            ]
+          }
+        }, {
+          'type': 'Feature',
+          'geometry': {
+            'type': 'MultiPolygon',
+            'coordinates': [
+              [[[-5e6, 6e6], [-5e6, 8e6], [-3e6, 8e6], [-3e6, 6e6]]],
+              [[[-2e6, 6e6], [-2e6, 8e6], [0, 8e6], [0, 6e6]]],
+              [[[1e6, 6e6], [1e6, 8e6], [3e6, 8e6], [3e6, 6e6]]]
+            ]
+          }
+        }, {
+          'type': 'Feature',
+          'geometry': {
+            'type': 'GeometryCollection',
+            'geometries': [{
+              'type': 'LineString',
+              'coordinates': [[-5e6, -5e6], [0, -5e6]]
+            }, {
+              'type': 'Point',
+              'coordinates': [4e6, -5e6]
+            }, {
+              'type': 'Polygon',
+              'coordinates': [[[1e6, -6e6], [2e6, -4e6], [3e6, -6e6]]]
+            }]
+          }
+        }]
+      };
