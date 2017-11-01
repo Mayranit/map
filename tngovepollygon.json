@@ -1,0 +1,25 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Region 1",
+        "color": "green"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+          [-36.497152, -89.540366],          
+          [36.523643, -88.068198],
+          [34.999281, -88.211021],
+          []34.999281, -90.309409,
+          [-36.497152, -89.540366]
+         
+          ]
+        ]
+      }
+    }
+  ]
+}
