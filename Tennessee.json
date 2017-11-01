@@ -4,8 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Region 1",
-        "color": "green"
+        "name": "Region 4"        
       },
       "geometry": {
         "type": "Polygon",
